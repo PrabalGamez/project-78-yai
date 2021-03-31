@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Project-78</title>
+  </head>
+  <body>
+    <h1>My family book</h1>
+    <img id="image" src="13510799_10154293417332458_3692495835474000650_n.jpg">
+    <br>
+    <button onclick="Next()">Next</button>
+    <p id="reason">My dad</p>
+    <style>
+        body{
+  text-align:center;
+}
+#heading1{
+  font-size:70px;
+  word-spacing:15px;
+  font-style:monospace;
+  font-variant:small-caps;
+}
+#image{
+  width:450px;
+  border-style:solid;
+  padding:10px;
+}
+#reason{
+  font-size:40px;
+}
+    </style>
+    <script>
+        var reasons = [
+  "My mom", "My grandmom", "My granddad", "My brother", "Me", "My dad"
+];
+var images =  [
+  "Mom.jpeg", "Grandmom.jpeg", "Granddad.jpeg", "Bro.jpeg", "Me in real!.jpeg", "13510799_10154293417332458_3692495835474000650_n.jpg"
+];
+
+var p = 0;
+
+function Next(){
+  document.getElementById("reason").innerHTML=reasons[p];
+  document.getElementById("image").src = images[p];
+  p++;
+      if (p == 6){
+    p = 0;
+  }
+}
+    </script>
+  </body>
+</html>
